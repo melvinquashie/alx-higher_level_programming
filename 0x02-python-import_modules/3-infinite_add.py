@@ -8,3 +8,4 @@ if __name__ == '__main__':
         arg_sum += int(arg)
 
     print('{:d}'.format(arg_sum))
+    
