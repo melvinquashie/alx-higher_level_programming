@@ -9,3 +9,4 @@
 * 100-my_calculator.py: a program that imports all functions from the file calculator_1.py and handles basic operations.
 * 101-easy_print.py: a program that prints #pythoniscool, followed by a new line, in the standard output.
 * 102-magic_calculation.py: does exactly the same as the provided Python bytecode.
+* 103-fast_alphabet.py: a program that prints the alphabet in uppercase, followed by a new line. 
