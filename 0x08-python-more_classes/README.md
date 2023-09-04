@@ -9,4 +9,4 @@
 * 6-rectangle.py: a class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
 * 7-rectangle.py: a class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
 * 8-rectangle.py: a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)
-* 
+* 9-rectangle.py: a class Rectangle that defines a rectangle by: (based on 8-rectangle.py)
