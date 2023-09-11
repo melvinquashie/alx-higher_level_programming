@@ -1,53 +1,30 @@
 #!/usr/bin/python3
 
-
-class BaseGeometry:
-    """BaseGeometry class with area method"""
-    def area(self):
-        """Area method not implemented"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """integer validator
-        Args:
-            name (str): name
-            value (int): integer value
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 1
-        """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value < 1:
-            raise ValueError("{} must be greater than 0".format(name))
+"""Defines a class Rectangle that inherits from BaseGeometry."""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class"""
+    """Represent a rectangle using BaseGeometry."""
 
     def __init__(self, width, height):
-        """__init__ method
+        """Intialize a new Rectangle.
+
         Args:
-            width (int): width integer must be greater than 0
-            height (int): height integer must be greater than 0
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
         """
         super().integer_validator("width", width)
-        super().integer_validator("height", height)
         self.__width = width
+        super().integer_validator("height", height)
         self.__height = height
 
-    def __str__(self):
-        """string representation"""
-        return "[{}] {:d}/{:d}".format(
-            type(self).__name__, self.__width, self.__height)
-
     def area(self):
-        """Area of rectangle"""
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
-
-if __name__ == '__main__':
-    r = Rectangle(3, 5)
-
-    print(r)
-    print(r.area())
+    def __str__(self):
+        """Return the print() and str() representation of a Rectangle."""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
